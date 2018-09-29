@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/material-components-web.min.css">
+    <script src="style/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="style/mdl.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link rel="stylesheet" href="style/mfglabs-iconset-master/css/mfglabs_iconset.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic-ext" rel="stylesheet">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+<header class="mdc-layout-grid__inner hide-on-mobile">
+    <div class=" mdc-layout-grid__cell--span-6">
+        <a href="#" class=""
+           data-title="Landing" >
+            <img src="img/2000px-Free_logo.svg.png" alt="logo" class="logo_honeycomb"/> </a>
+    </div>
+    <div class=" mdc-layout-grid__cell--span-6">
+        <a href="index.html" class="new_user"
+           data-title="Вход" >
+        </a>
+    </div>
+</header>
+
+
+<div class="mdc-layout-grid mycontainer">
+    <div class="mdc-layout-grid__inner my-grid">
+
+        <div class=" deskription_form mdc-layout-grid__cell--span-8">
+            <div  class = " mdc-layout-grid__inner " >
+            <div class="mdc-layout-grid__cell--span-8 demo">
+                <h1 class="">Lorem </h1>
+                <p class="deskription_form_text">
+                    Мы создаём учётную запись для доступа к сервису.
+                </p>
+                <p class="deskription_form_text">
+                    e-mail используется для коммуникации, восстановления или смены пароля.
+                </p>
+                <img class="deskription_form_img_snail"
+                     alt="narwhal"
+                     src="img/robot-transparent-robotic-3.png" />
+            </div>        <!--mdc-layout-grid__cell--span-3--align-middle-->
+        </div>        <!---->
+        </div>        <!--ddeskription_form mdc-layout-grid__cell--span-8-->
+
+        <div class="mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet registration">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3">
+                <div class="registration_social">
+                    <p class="registration_form_text">Регистрация</p>
+<div class="registration_social_icons">
+                    <ul class="nav">
+                        <li class="nav_social-descriptions">
+                            <a href="#">
+                                <i class="icon-google_plus_circle icon2x"></i>
+                            </a>
+                        </li>
+                        <li class="nav_social-descriptions">
+                            <a href="#">
+                                <i class="icon-facebook_circle icon2x"></i>
+                            </a>
+                        </li>
+                        <li class="nav_social-descriptions">
+                            <a href="#">
+                                <i class="icon-git_circle icon2x"></i>
+                            </a>
+                        </li>
+                        <li class="nav_social-descriptions">
+                            <a href="#">
+                                <i class="icon-linked_in_circle icon2x"></i>
+                            </a>
+                        </li>
+                        <li class="nav_social-descriptions">
+                            <a href="#">
+                                <i class="icon-twitter_circle icon2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+</div>
+                    <form class="registration_form " method="post"
+                          action="https://mnesium.com/dreamsbureau/registration">
+
+                        <label for="email">
+                            <input type="email"
+                                   id="email"
+                                   class="registration_form_inp "
+                                   name="email"
+                                   placeholder="e-mail"
+                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                   >
+                            <span class="form_hint">Введите корректный адрес</span>
+                        </label>
+
+                        <br>
+                        <label for="password">
+                            <input  type="password"
+                                    id="password"
+                                    class="registration_form_inp "
+                                    name="password"
+                                    placeholder="пароль"
+                                    maxlength="50"
+                                    minlength="8"
+                                    required>
+                        </label>
+
+                        <br>
+                        <label for="password_repeat">
+                            <input  type="password"
+                                    id="password_repeat"
+                                    class="registration_form_inp"
+                                    name="password"
+                                    placeholder="пароль"
+                                    maxlength="50"
+                                    minlength="8"
+                                    required>
+                        </label>
+                        <br>
+
+                        <input type="checkbox" id="checkbox" class="user_declaration"/>
+                        <span class="user_declaration_txt">Я принимаю</span>
+                           <a href="declaration.html" class="user_declaration">
+                               пользовательское соглашение
+                           </a>
+
+                        <label for="checkbox"
+                               class="user_declaration">
+                        </label>
+                        <br>
+
+                        <div class="g-recaptcha hide-on-mobile"
+                             data-size=""
+                             data-sitekey="6LemzVkUAAAAAABXAkD1asf9WzV13vhAoyGk9-3e">
+                        </div><!--g-recaptcha-->
+
+                        <div class="g-recaptcha show-on-mobile"
+                             data-size="compact"
+                             data-sitekey="6LemzVkUAAAAAABXAkD1asf9WzV13vhAoyGk9-3e">
+                        </div><!--g-recaptcha-->
+
+                        <script type="text/javascript">
+                            function validateForm () {
+
+                                var password1 = document.getElementById('password');
+                                var password2 = document.getElementById('password_repeat');
+
+                                if (password1.value !== password2.value) {
+                                     alert('Проверьте пароли!');
+                                     return false;
+                                }
+
+                                var email = document.getElementById('email');
+
+                                var email_regexp = /[0-9a-zа-я_A-ZА-Я]+@[0-9a-zа-я_A-ZА-Я^.]+\.[a-zа-яА-ЯA-Z]{2,4}/i;
+
+                                if (!email_regexp.test(email.value)) {
+                                    alert('Проверьте email');
+                                    return false;
+                                }
+                            }
+
+                        </script>
+
+                        <div class = "Absolute-Center">
+                            <button class="btn login"
+                                    type="submit" value="submit" onclick="return validateForm()"> Регистрация </button>
+                        </div> <!--div class = "Absolute-Center"-->
+
+                    </form>
+                </div><!--registration_social-->
+            </div> <!--mdc-layout-grid__cell mdc-layout-grid__cell--span-3-->
+        </div> <!--mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-8-tablet registration-->
+
+    </div> <!--mdc-layout-grid__inner-->
+</div>    <!--mdc-layout-grid mycontainer-->
+
+
+</body>
+</html>
